@@ -7,9 +7,9 @@ class ProductAdded:
     def __init__(self, my_driver):
         self.driver = my_driver
         self.quantity_added = (By.ID, 'layer_cart_product_quantity')
-        self.price_products = (By.CLASS_NAME, 'ajax_block_products_total')
-        self.shipping_price = (By.XPATH, '//*[@id="layer_cart"]/div[1]/div[2]/div[2]/span')
-        self.total_price = (By.XPATH, '//*[@id="layer_cart"]/div[1]/div[2]/div[3]/span')
+        self.price_products = (By.ID, 'layer_cart_product_price')
+        self.shipping_price = (By.XPATH, '//*[@class="ajax_cart_shipping_cost"]')
+        self.total_price = (By.XPATH, '//*[@class="ajax_block_cart_total"]')
         self.product_name = (By.ID, 'layer_cart_product_title')
 
     def return_quantity_added(self):

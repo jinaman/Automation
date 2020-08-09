@@ -7,14 +7,14 @@ class AddToCart:
         self.driver = my_driver
         self.quantity_box = (By.ID, 'quantity_wanted')
         self.size_select = (By.ID, 'group_1')
-        self.add_to_cart_button = (By.XPATH, '//*[@id="add_to_cart"]/button')
+        self.add_to_cart_button = (By.NAME, 'Submit')
 
     def enter_quantity(self, quantity):
         self.driver.find_element(*self.quantity_box).clear()
         self.driver.find_element(*self.quantity_box).send_keys(quantity)
 
     def enter_size(self, size):
-        Select(self.driver.find_element(*self.size_select)).select_by_value(size)
+        Select(self.driver.find_element(*self.size_select)).select_by_visible_text(size)
 
     def click_add_to_cart(self):
         self.driver.find_element(*self.add_to_cart_button).click()
