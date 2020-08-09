@@ -23,7 +23,7 @@ class LoginCases(unittest.TestCase):
         self.authentication_page.sign_in()
         self.assertEqual(self.authentication_page.return_invalid_email_text(), 'Invalid email address.')
 
-    def test_login_caso_2(self):  #hey
+    def test_login_caso_2(self):
         self.principal_page.login()
         self.authentication_page.input_email('namanjuanignacio@gmail.com')
         self.authentication_page.input_password('lalala')
