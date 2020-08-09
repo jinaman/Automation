@@ -6,7 +6,7 @@ class AuthenPage:
         self.driver = my_driver
         self.email_box = (By.ID, 'email')
         self.password_box = (By.ID, 'passwd')
-        self.sign_in_button = (By.XPATH, '//*[@id="SubmitLogin"]/span/i')
+        self.sign_in_button = (By.ID, 'SubmitLogin')
         self.alert_invalid_email = (By.XPATH, '//*[@id="center_column"]/div[1]/ol/li')
         self.alert_authentication_failed = (By.XPATH, '//*[@id="center_column"]/div[1]/ol/li')
 
